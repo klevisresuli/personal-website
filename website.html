@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klevis Resuli - Personal Website</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: #0077b6;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #sidebar {
+            background: #023e8a;
+            color: #fff;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            padding: 1rem;
+            box-sizing: border-box;
+            top: 4rem;
+            overflow-y: auto;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+        }
+        #sidebar img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 2px solid #fff;
+        }
+        #sidebar nav a {
+            display: block;
+            color: #fff;
+            padding: 0.5rem 0;
+            text-decoration: none;
+            transition: background 0.3s, padding-left 0.3s;
+        }
+        #sidebar nav a:hover {
+            background: #00b4d8;
+            padding-left: 10px;
+        }
+        #sidebar p {
+            margin: 1rem 0;
+        }
+        #sidebar a.linkedin {
+            color: #0a66c2;
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+            background: #fff;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        #sidebar a.linkedin:hover {
+            background: #0a66c2;
+            color: #fff;
+        }
+        .content-container {
+            margin-left: 270px;
+            padding: 2rem;
+            padding-top: 6rem;
+            box-sizing: border-box;
+            height: 100vh;
+            overflow-y: auto;
+            width: calc(100% - 270px);
+        }
+        .section {
+            margin-bottom: 2rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0077b6;
+        }
+        .project {
+            border: 1px solid #ddd;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            color: #0077b6;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #023e8a;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            background: #0077b6;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+            background: #0a66c2;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        footer a:hover {
+            background: #fff;
+            color: #0a66c2;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Klevis Resuli</h1>
+</header>
+
+<div id="sidebar">
+    <img src="Photoroom.png" alt="Klevis Resuli">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+    </nav>
+    <p>klevisresuli@outlook.com<br>(47) 41195239<br>Trondheim, NO</p>
+
+    <a href="https://www.linkedin.com/in/klevis-resuli-a23497121/" class="linkedin" target="_blank">LinkedIn Profile</a> <br>
+
+    <a href="https://github.com/klevisresuli" class="linkedin" target="_blank">Github Profile</a>
+
+</div>
+
+<div class="content-container">
+    <div class="section" id="home">
+        <h2>Welcome</h2>
+        <p>Hello! I'm Klevis Resuli, an embedded systems enthusiast currently pursuing my Master's in Embedded Computing Systems at NTNU. Welcome to my personal website where you can learn more about my skills, education, work experience, and projects.</p>
+    </div>
+
+    <div class="section" id="about">
+        <h2>About Me</h2>
+        <h3>Skills & Interests</h3>
+        <p><strong>Technical Skills:</strong> Microcontrollers; C; C++; Python; Assembly; HDL; communication protocols (I2C, SPI, CAN, UART); MATLAB/Simulink; Linux; HIL; Problem Solving</p>
+        <p><strong>Language Skills:</strong> Albanian; English; Italian</p>
+        <p><strong>Interests:</strong> Electronics; technology; sustainability; reading; traveling; training</p>
+        
+        <h3>Education</h3>
+        <p><strong>Norwegian University of Science and Technology</strong><br>
+        MS, Embedded Computing Systems (Aug. 2023 - Present) - Trondheim, NO</p>
+        <p><strong>Polytechnic University of Tirana</strong><br>
+        BS, Electronic Engineering (Oct. 2019 – Jul. 2022) - Tirana, AL</p>
+    </div>
+
+    <div class="section" id="experience">
+        <h2>Work Experience</h2>
+        <p><strong>Kineton Albania</strong><br>
+        Test Engineer (Sept. 2022 – Aug. 2023) - Tirana, AL</p>
+        <ul>
+            <li>Worked as an Automotive Test Engineer consultant for Maserati.</li>
+            <li>Developed Verification and Validation tests for latest automotive software using V-Cycle methodology.</li>
+            <li>Executed tests in hybrid environment to find bugs and report them.</li>
+        </ul>
+    </div>
+
+    <div class="section" id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Alarm System Powered by Solar Energy</h3>
+            <p>Part of my bachelor thesis, where I made a system using Arduino Uno as the central unit of a home alarm system.</p>
+            <ul>
+                <li>Measured temperature, humidity, LPG level, water level, flame detection, front door opening detection using suitable sensors.</li>
+                <li>Activated the alarm when threshold values exceeded.</li>
+                <li>Powered the system with a solar panel and used a battery as backup.</li>
+            </ul>
+            <p><a href="https://github.com/klevisresuli/Alarm-System-Powered-by-Solar-Energy" target="_blank">GitHub Link</a></p>
+        </div>
+        
+        <div class="project">
+            <h3>Ping Pong Game</h3>
+            <p>Part of a term project in TTK4155 course at NTNU, where a ping pong game machine was built.</p>
+            <ul>
+                <li>Used two nodes: one with ATMEGA162 microcontroller for data from USB gaming board and another with Arduino DUE board to control servo and motors.</li>
+                <li>Nodes communicated via CAN protocol to make the system work.</li>
+            </ul>
+            <p><a href="https://github.com/klevisresuli/PingPongGame" target="_blank">GitHub Link</a></p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Klevis Resuli | <a href="https://www.linkedin.com/in/klevis-resuli-a23497121/" target="_blank">LinkedIn Profile</a> |  <a href="https://github.com/klevisresuli" target="_blank">Github Profile</a> </p>
+</footer>
+
+</body>
+</html>
+
