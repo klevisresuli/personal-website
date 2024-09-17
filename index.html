@@ -201,7 +201,7 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
-    <p>klevisresuli@outlook.com<br>(47) 41195239<br>Trondheim, NO</p>
+    <p>klevisresuli@outlook.com<br>(+47) 41195239<br>Kaiserslautern, DE</p>
 
     <a href="https://www.linkedin.com/in/klevis-resuli-a23497121/" class="linkedin" target="_blank">LinkedIn Profile</a> <br>
 
@@ -212,7 +212,7 @@
 <div class="content-container">
     <div class="section" id="home">
         <h2>Welcome</h2>
-        <p>Hello! I'm Klevis Resuli, an embedded systems enthusiast currently pursuing my Master's in Embedded Computing Systems at NTNU. Welcome to my personal website where you can learn more about my skills, education, work experience, and projects.</p>
+        <p>Hello! I'm Klevis Resuli, an embedded systems enthusiast currently pursuing my Master's in Embedded Computing Systems. Welcome to my personal website where you can learn more about my skills, education, work experience, and projects.</p>
         <p>Feel free to explore my projects and get in touch with me for any inquiries.</p>
         <p><a href="resume/KlevisResuli_Resume.pdf" target="_blank">Download my Resume</a></p>
     </div>
@@ -221,43 +221,81 @@
         <h2>Projects</h2>
         
         <div class="project">
-            <h3> Smart Traffic Control System </h3>
-            <img src="images/smart_traffic_control.png" alt="Smart Traffic Control System">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.5em;">PCB Business Card V0.1</h3>
+                <span style="font-size: 1em; color: #666; ">August 2024 - September 2024</span>
+            </div>
+            <div class="image-container">
+                <img src="images/PCB_front.png" alt="Front of the PCB"  width="49%">
+                <img src="images/PCB_back.png" alt="Back of the PCB" width="49%">
+            </div>
+            <p>Inspired by 2024 Business Card Contest by Hackaday.io decided to build my own personal PCB business card. It contains an integrated NFC tag to share this website for contact information wirelessly, and uses energy harvesting from NFC field to light up the LED circuitry</p>
+            <ul>
+            <li>The heart of this PCB is the NFC controller IC, the NT3H1101 from NXP Semiconductors and programmed using the Tagwriter app from NXP, which supports writing website links, phone numbers, emails, and more.</li>
+            <li>Two layer PCB designed in KiCAD where the imported text, logo, and QR code into PCB are designed using KiCAD’s "Bitmap to Component Convertor" tool.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.5em;">Smart Traffic Control System</h3>
+                <span style="font-size: 1em; color: #666; ">April 2024 - May 2024</span>
+            </div>
+            <div class="image-container">
+                <img src="images/car_detection_1.png" alt="car detection"  width="49%">
+                <img src="images/traffic_lights.png" alt="traffic lights update" width="49%">
+            </div>
             <p>The idea is creating a system based on ESP32-Cam that is going to control the traffic light based on the number of cars on each side of an intersection making the traffic easier and also giving priority to emergencies(case of an ambulance being in the intersection).</p>
             <ul>
-            <li>main code is a proof of concept that does calibration, undistortion, pose estimation and homography to estimate positions and directions of cars. For deployment in a stationary environment (camera is stationary in world frame), only the position and direction estimation would need to be done during inference.</li>
-            <li>ESP32-CAM firmware consists of two threads running in parallel. The first one runs the handleClients where ESP32 works as a server and we can get a capture from the Python script using the dialog window showing the camera live-stream and pressing the k button on the keyboard. The second thread handles the traffic light control. First, it reads the data.json file from the git repo and deserializes it into JSON format. After that, we read the specific direction and adjusted the green light timing accordingly. For more details check the code.</li>
+            <li>main code is a proof of concept that does calibration, undistortion, pose estimation and homography to estimate positions and directions of cars as shown by the green dots on the left picture. For deployment in a stationary environment (camera is stationary in world frame), only the position and direction estimation would need to be done during inference.</li>
+            <li>ESP32-CAM firmware consists of two threads running in parallel. The first one runs the handleClients where ESP32 works as a server and we can get a capture from the Python script using the dialog window showing the camera live-stream and pressing the k button on the keyboard. The second thread handles the traffic light control. First, it reads the data.json file from the git repo and deserializes it into JSON format. After that, we read the specific direction and adjusted the green light timing accordingly as presented on the right picture. For more details check the code.</li>
             </ul>
             <p><a href="https://github.com/Crezle/TTK4255-ROBVIS-PROJECT" target="_blank">GitHub Link</a></p>
         </div>
-            <div class="project">
-                <h3> The Elevator Project</h3>
-                <img src="images/smart_traffic_control.png" alt="The Elevator Project">
-                <p>A software for controlling 3 elevators working in parallel across 4 floors using Go coding language.</p>
-                
-                <ul>
-                <li></li>
-                <li></li>
-                </ul>
-                <p><a href="https://github.com/Crezle/TTK4255-ROBVIS-PROJECT" target="_blank">GitHub Link</a></p>   
-            
-        </div>
         <div class="project">
-            <h3>Ping Pong Game</h3>
-            <img src="images/ping_pong_game.png" alt="Ping Pong Game">
-            <img src="images/schematics.png" alt="ATMEGA162 and peripherals schematics">
-            <p>Part of a term project in TTK4155 course at NTNU, where a distributed embedded control system was built. </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.5em;">The Elevator Project</h3>
+                <span style="font-size: 1em; color: #666; ">January 2024 - April 2024</span>
+            </div>
+            <div class="image-container">
+                <img src="images/Elevator_project.png" alt="Elevator hardware" width="30%">
+                <img src="images/FSMChart.png" alt="Elevator FSM" width="30%">
+            </div>
+            <p>A software for controlling 3 elevators,hardware shown in the left figure, working in parallel across 4 floors using Go coding language.</p>
+            <p>The system ensures efficient elevator service, even in the presence of failures such as network disconnections or power loss. The design uses a peer-to-peer network topology, where each elevator (node) communicates via UDP broadcasts to make real-time decisions on servicing calls. The core of the system is a finite state machine (FSM) that governs each elevator’s operation as shown in the diagram on the right. Each elevator independently processes requests, utilizing a cost function to prioritize calls while ensuring no requests are lost. In case of a failure, a backup process takes over to continue elevator operation and recover pending tasks without user intervention.</p>
+            <p>Key features include:</p>
             <ul>
-            <li>Consists of two parts: Node 1 and Node 2. Node 1 consists of the breadboard (CAN, SRAM, A/D Converter) and a USB Multifunction board, and Node 2 of an Arduino Due development board with a dedicated I/O-shield, a motorbox, servo and solenoid.</li>
-            <li>Nodes communicated via CAN protocol to make the system work.</li>
+            <li>Fault tolerance: The system handles elevator disconnections and failures gracefully, ensuring no service interruptions.</li>
+            <li>Concurrency: Go’s concurrency model was leveraged to ensure smooth, parallel operation of elevators.</li>
+            <li>Cost efficiency: Calls are distributed efficiently among elevators based on their current state, using the cost function to minimize wait times.</li>
             </ul>
-            <p><a href="https://github.com/klevisresuli/PingPongGame" target="_blank">GitHub Link</a></p>
+            <p><a href="https://github.com/klevisresuli/ElevatorProject" target="_blank">GitHub Link</a></p>   
             
+        </div>
+        <div class="project">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.5em;">Ping Pong Game</h3>
+                <span style="font-size: 1em; color: #666;">September 2023 - November 2023</span>
+            </div>
+                <div class="image-container">
+                <img src="images/ping_pong_game.png" alt="Ping Pong Game" width="49%">
+                <img src="images/schematics.png" alt="ATMEGA162 and peripherals schematics" width="49%">
+                </div>
+                <p>Part of a term project in TTK4155 course at NTNU, where a distributed embedded control system was built.</p>
+                <ul>
+                    <li>Developed a distributed embedded control system for a Ping Pong game as part of the TTK4155 course at NTNU, utilizing CAN protocol for communication between nodes.</li>
+                    <li>Designed and implemented Node 1 using an ATMEGA162 microcontroller integrated with a USB gaming board, CAN interface, SRAM, and A/D converter for precise data acquisition.</li>
+                    <li>Constructed Node 2 with an Arduino Due development board, custom I/O shield, motorbox, servo, and solenoid to control the physical movements of the Ping Pong game.</li>
+                    <li>Achieved accurate and responsive control of the Ping Pong system, enhancing gameplay experience by ensuring minimal latency between user input and motor responses.</li>
+                </ul>
+                <p><a href="https://github.com/klevisresuli/PingPongGame" target="_blank">GitHub Link</a></p>
         </div>
 
 
         <div class="project">
-            <h3>Alarm System Powered by Solar Energy</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.5em;">Alarm System Powered by Solar Energy</h3>
+                <span style="font-size: 1em; color: #666;">April 2022 - July 2022</span>
+            </div>
             <video width="100%" controls>
                 <source src="videos/alarm_system.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -272,7 +310,10 @@
         </div>
 
         <div class="project">
-            <h3>Simple audio card using arduino</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h3 style="margin: 0; font-size: 1.5em;">Simple Audio Card using Arduino</h3>
+                <span style="font-size: 1em; color: #666;">December 2021 - January 2022</span>
+            </div>
             <video width="100%" controls>
                 <source src="videos/mario_underworld.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -293,17 +334,27 @@
     <div class="section" id="about">
         <h2>About Me</h2>
         <h3>Skills & Interests</h3>
-        <p><strong>Technical Skills:</strong> Microcontrollers; C; C++; Python; Assembly; HDL; communication protocols (I2C, SPI, CAN, UART); MATLAB/Simulink; Linux; HIL; Problem Solving</p>
-        <p><strong>Language Skills:</strong> Albanian; English; Italian</p>
+        <p><strong>Technical Skills:</strong> Microcontrollers, C, C++, Python, Assembly, HDL, RTOS, Communication Protocols(I2C, SPI, CAN, UART, RS485), Build Tools, Gi t,
+            MATLAB, Simulink, Linux, HIL testing, Problem Solving</p>
+        <p><strong>Language Skills:</strong> Albanian; English; Italian; German</p>
         <p><strong>Interests:</strong> Electronics; Technology; Sustainability; Reading; Traveling; Training</p>
         
         <h3>Education</h3>
-        <p><strong>Norwegian University of Science and Technology</strong><br>
-        MS, Embedded Computing Systems (Aug. 2023 - Present) - Trondheim, NO</p>
+        <p><strong>Norges teknisk-naturvitenskapelige universitet(NTNU) and Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau(RPTU)</strong><br>
+        MS, Embedded Computing Systems (Aug. 2023 - Present)</p>
+        <p><strong>First Year</strong><br>NTNU - Trondheim, NO, August 2023 - June 2024 </p>
+        <p><strong>Second Year</strong><br>RPTU - Kaiserslautern, DE, August 2024 - Current</p>
         <p><strong>Polytechnic University of Tirana</strong><br>
         BS, Electronic Engineering (Oct. 2019 – Jul. 2022) - Tirana, AL</p>
 
         <h3>Work Experience</h3>
+        <p><strong>NTNU</strong><br>
+            Student Assistant (Jun. 2024 – Sept. 2024) - Trondheim, NO</p>
+            <ul>
+                <li>Implemented a telecommunication system using ESP32-WiFi-MESH, deploying 17 nodes across the campus.</li>
+                <li>Achieved a 95% success rate in data delivery to the root node and enhanced real-time data access for Madagascar Nanogrids by Nanoe.</li>
+                <li>Mapped the campus network, showcasing the system’s scalability and potential for broader applications.</li>
+            </ul>
         <p><strong>Kineton Albania</strong><br>
             Test Engineer (Sept. 2022 – Aug. 2023) - Tirana, AL</p>
             <ul>
